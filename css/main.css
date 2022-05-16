@@ -23,7 +23,6 @@ a {
 }
 
 section {
-  min-width: 1600px;
   height: 100vh;
   position: relative;
   display: flex;
@@ -153,7 +152,8 @@ nav li {
 }
 
 .contents_box {
-  min-width: 1500px;
+  width: 85vw;
+  max-width: 1600px;
   height: 80vh;
   background: #ffffff;
   box-shadow: 2px 2px 15px #c0c0c0;
@@ -245,12 +245,32 @@ nav li {
 .explanation {
   font-family: "Noto Sans KR";
   font-weight: 400;
-  font-size: 14px;
+  font-size: 13px;
   color: #333;
   line-height: 1.8;
-  height: 50%;
   display: flex;
   align-items: center;
+}
+
+.txt-01 {
+  margin-top: 20px;
+}
+
+.txt-02 {
+    display: none;
+}
+
+@media screen and (max-height: 900px) {
+    .txt-01 {
+        display: none;
+    }
+    .txt-02 {
+        display: block;
+    }
+    .mobile {
+        bottom: 4% !important;
+        left: 36.5% !important;
+    }
 }
 
 .btn_wrap {
@@ -316,7 +336,8 @@ nav li {
 
 .mobile_cover img {
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   position: absolute;
   top: 0;
 }
